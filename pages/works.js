@@ -16,14 +16,14 @@ const Works = () => {
         <SimpleGrid columns={[1, 1, 2]} gap={6}>
           <Section>
             <WorkGridItem
-              id="api"
+              id="citiesapi"
               title="Cities API"
               thumbnail={thumbProjectOne}
             >
               Project developed during the bootcamp DIO. Creating an API that
               searches for Brazilian cities and calculates the distance between
               them using latitude and longitude. Using Postman for testing our
-              API, and Heroku to deploy our app
+              API, and Heroku to deploy our app.
             </WorkGridItem>
           </Section>
           <Section>
