@@ -4,8 +4,12 @@ import {
   Container,
   Box,
   Link,
+  SimpleGrid,
+  List,
+  ListItem,
   Heading,
   Image,
+  Icon,
   useColorModeValue
 } from '@chakra-ui/react'
 
@@ -14,6 +18,8 @@ import Layout from '../components/layouts/article'
 import Section from '../components/section'
 import Paragraph from '../components/paragraph'
 import { BioSection, BioYear } from '../components/bio'
+import { GridItem } from '../components/grid-item'
+import { IoLogoInstagram, IoLogoGithub, IoLogoLinkedin } from 'react-icons/io5'
 
 const Page = () => {
   return (
@@ -116,6 +122,49 @@ const Page = () => {
           <Paragraph>
             Cook, Snowboarding, Bear, <Link href="">Snow</Link>
           </Paragraph>
+        </Section>
+
+        <Section delay={0.3}>
+          <Heading as="h3" variant="section-title">
+            On the web
+          </Heading>
+          <List>
+            <ListItem>
+              <Link href="https://github.com/igorth" target="_blank">
+                <Button
+                  variant="ghost"
+                  colorScheme="teal"
+                  leftIcon={<Icon as={IoLogoGithub} />}
+                >
+                  @igorth
+                </Button>
+              </Link>
+            </ListItem>
+
+            <ListItem>
+              <Link href="https://www.linkedin.com/in/igordiasth/" target="_blank">
+                <Button
+                  variant="ghost"
+                  colorScheme="teal"
+                  leftIcon={<Icon as={IoLogoLinkedin} />}
+                >
+                  @igordiasth
+                </Button>
+              </Link>
+            </ListItem>
+
+            <ListItem>
+              <Link href="http://instagram.com/uaiboraviajar" target="_blank">
+                <Button
+                  variant="ghost"
+                  colorScheme="teal"
+                  leftIcon={<Icon as={IoLogoInstagram} />}
+                >
+                  @uaiboraviajar
+                </Button>
+              </Link>
+            </ListItem>
+          </List>
         </Section>
       </Container>
     </Layout>
